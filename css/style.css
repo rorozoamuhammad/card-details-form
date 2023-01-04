@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+main header {
+    position: relative;
+    width: 50vw;
+}
+
+main header .bg img {
+    height: 100vh;
+    width: 60%;
+    position: absolute;
+}
+
+main header .bg .dekstop {
+    display: block;
+}
+
+main header .bg .mobile {
+    display: none;
+}
+
+main header .kartu {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+}
+
+main header .kartu .card1 {
+    position: relative;
+    top: 3em;
+    left: 5em;
+    height: 39vh;
+    width: 85%;
+    color: white;
+}
+
+main header .kartu .card1 img {
+    position: absolute;
+}
+
+main header .kartu .card1 img:nth-child(2) {
+    margin-top: 1.5em;
+    margin-left: 2em;
+}
+
+main header .kartu .card1 h1 {
+    position: absolute;
+    top: 3.5em;
+    left: 1.7em;
+    font-size: 1.7em;
+}
+
+main header .kartu .card1 .belah {
+    position: absolute;
+    top: 10em;
+    left: 2.8em;
+    width: 58%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main header .kartu .card1 .belah p {
+    font-size: 1.2em;
+}
+
+main header .kartu .card2 {
+    position: relative;
+    left: 10em;
+    top: 5em;
+}
+
+main header .kartu .card2 img {
+    position: absolute;
+}
+
+main header .kartu .card2 p {
+    position: absolute;
+    color: hsl(270, 3%, 87%);
+    right: 43%;
+    top: 6.1em;
+}
+
+main article {
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5em;
+}
+
+main article[data-muncul="no"] {
+    display: none;
+}
+
+main article label {
+    color: hsl(278, 68%, 11%);
+    font-size: 1.2em;
+}
+
+main article label:hover {
+    cursor: pointer;
+}
+
+main article input {
+    margin-block: 1em;
+    margin-bottom: 1.5em;
+    outline: none;
+    width: 77%;
+    padding: .7em;
+    border: 2px solid hsl(279, 6%, 55%);
+    border-radius: 5px;
+}
+
+main article input[data-salah="yes"] {
+    border: 2px solid hsl(0, 100%, 66%);
+}
+
+main article input:focus {
+    border-image-source: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-image-slice: 1;
+}
+
+main article input::placeholder {
+    color: hsl(279, 6%, 55%);
+    font-size: 1.3em;
+}
+
+main article p {
+    color: hsl(0, 100%, 66%);
+    margin-bottom: .5em;
+}
+
+main article p[data-salah="no"] {
+    display: none;
+}
+
+main article p[data-salah="yes"] {
+    display: block;
+}
+
+main article .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main article .section .date {
+    width: 40%;
+}
+
+main article .section .date label {
+    font-size: 1.1em;
+}
+
+main article .section .date .slice {
+    display: flex;
+    gap: 1em;
+}
+
+main article .section .date .slice input {
+    width: 30%;
+}
+
+main article .section .cvc {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main article .section .cvc input {
+    width: 55%;
+}
+
+main article button {
+    margin-top: 1em;
+    width: 83%;
+    padding: .8em 0;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: .9em;
+    border-radius: 5px;
+}
+
+main article button:hover {
+    cursor: pointer;
+}
+
+main .complete[data-muncul="no"] {
+    display: none;
+}
+
+main .complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    gap: 1em;
+}
+
+main .complete h1 {
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+main .complete p {
+    color: hsl(279, 6%, 55%);
+}
+
+main .complete button {
+    background-color: hsl(278, 68%, 11%);
+    width: 60%;
+    color: white;
+    padding: .7em 0;
+    border-radius: 5px;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        flex-direction: column;
+    }
+
+    main header {
+        width: 100vw;
+    }
+
+    main header .bg .dekstop {
+        display: none;
+    }
+
+    main header .bg .mobile {
+        display: block;
+        width: 100vw;
+        height: 30vh;
+    }
+
+    main header .kartu {
+        width: 100%;
+        height: 45vh;
+    }
+
+    main header .kartu .card1 {
+        left: 1em;
+        top: 6.5em;
+        width: 100%;
+        height: auto;
+        z-index: 9999;
+    }
+
+    main header .kartu .card1 img:nth-child(1) {
+        width: 70%;
+    }
+
+    main header .kartu .card1 img:nth-child(2) {
+        width: 10%;
+        margin-left: 1em;
+    }
+
+    main header .kartu .card1 h1 {
+        font-size: 1.15em;
+        left: 1em;
+    }
+
+    main header .kartu .card1 .belah {
+        top: 6em;
+        width: 58%;
+        left: 1.1em;
+    }
+
+    main header .kartu .card1 .belah p {
+        font-size: .8em;
+    }
+
+    main header .kartu .card2 {
+        left: 3em;
+        top: 1.5em;
+        width: 100%;
+        height: auto;
+    }
+
+    main header .kartu .card2 img {
+        width: 70%;
+    }
+
+    main header .kartu .card2 p {
+        top: 3.3em;
+        left: 53%;
+    }
+
+    main article {
+        width: 90vw;
+        margin: auto;
+    }
+
+    main article input {
+        width: 93%;
+    }
+
+    main article .section .date {
+        width: 60%;
+    }
+
+    main article .section .date label {
+        font-size: 1em;
+    }
+
+    main article .section .cvc {
+        width: 50%;
+    }
+
+    main article .section .cvc label {
+        font-size: 1em;
+    }
+
+    main article .section .cvc input {
+        width: 85%;
+    }
+
+    main article button {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    main .complete {
+        width: 90vw;
+    }
+
+    main .complete button {
+        width: 90%;
+    }
+}

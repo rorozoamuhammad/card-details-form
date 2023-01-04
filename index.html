@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <header>
+      <div class="bg">
+        <img src="images/bg-main-desktop.png" alt="background main dekstop" class="dekstop">
+        <img src="images/bg-main-mobile.png" alt="background main mobile" class="mobile">
+      </div>
+      <div class="kartu">
+        <div class="card1">
+          <img src="images/bg-card-front.png" alt="card front">
+          <img src="images/card-logo.svg" alt="logo">
+          <h1 id="numInput">0000 0000 0000 0000</h1>
+          <div class="belah">
+            <p id="nameInput">Jane Appleseed</p>
+            <p id="dt">00/00</p>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="images/bg-card-back.png" alt="card back">
+          <p id="cvcInput">000</p>
+        </div>
+      </div>
+    </header>
+    <article data-muncul="yes" id="form">
+      <label for="name">Cardholder Name</label>
+      <input type="text" id="name" autocomplete="off" placeholder="e.g. Jane Appleseed" data-salah="no">
+      <p data-salah="no" id="nameErr">Can't be blank</p>
+      <label for="num">Card Number</label>
+      <input type="text" id="num" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000" data-salah="no">
+      <p data-salah="no" id="numErr">Wrong Format, Number Only</p>
+      <div class="section">
+        <div class="date">
+          <label for="date">Exp. Date (MM/YY)</label>
+          <div class="slice">
+            <input type="text" id="date" placeholder="MM" autocomplete="off" maxlength="2" data-salah="no"> 
+            <input type="text" placeholder="YY" autocomplete="off" maxlength="2" data-salah="no" id="dateYY">
+          </div>
+          <p data-salah="no" id="dateErr">Can't be blank</p>
+        </div>
+        <div class="cvc">
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" autocomplete="off" placeholder="e.g. 123" data-salah="no">
+          <p data-salah="no" id="cvcErr">Can't be blank</p>
+        </div>
+      </div>
+      <button type="submit" id="confirm">Confirm</button>
+    </article>
+    <div class="complete" data-muncul="no" id="complete">
+      <img src="images/icon-complete.svg" alt="icon complete">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button type="submit" id="completeBtn">Continue</button>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
